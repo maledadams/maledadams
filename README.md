@@ -1,16 +1,20 @@
-## Hi there 👋
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/maledadams)
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/GracielaDiaz233)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/lucia-m-adams)
+[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=X&logoColor=white)](https://x.com/maledadams)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:maledadams@gmail.com)
+<br><br>▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+### Hi, I’m Lucia Adams `ㅅ´ 
+I’m a computer science student working mostly with web development, backend systems, of AI/ML. I’ve built and maintained websites, worked with APIs, and experimented with automation and computer vision. Right now I’m focused on systems, automation, and AI implementations.
 
-<!--
-**maledadams/maledadams** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+When I’m not coding, I’m usually messing with design, editing videos, or exploring random projects. I listen to a lot of EDM and dive into history rabbit holes for fun. <br><br>
+⠈⠂⠄⠄⠂⠁⠁⠂⠄⠄⠂⠁⠁⠂⠄⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁  <br><br>
+**Languages** ➤ Python, JavaScript, TypeScript, SQL, R <br><br>
+**Backend & APIs** ➤ Node.js, Express.js, FastAPI, JWT <br><br>
+**Frontend** ➤ React, Next.js, TailwindCSS, Vite <br><br>
+**Databases** ➤ PostgreSQL, MongoDB, SQLite <br><br>
+**Deployment & Infra** ➤ Vercel, Cloudflare, Docker <br><br>
+**Data / AI** ➤ NumPy, Pandas, PyTorch <br><br>
+**Creative** ➤ Adobe Premiere Pro, Affinity Designer, Aseprite <br><br>
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
