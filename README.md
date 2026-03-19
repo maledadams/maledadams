@@ -10,11 +10,11 @@ I’m a computer science student working mostly with web development, backend sy
 When I’m not coding, I’m usually messing with design, editing videos, or exploring random projects. I listen to a lot of EDM and dive into history rabbit holes for fun. <br><br>
 ⠈⠂⠄⠄⠂⠁⠁⠂⠄⠄⠂⠁⠁⠂⠄⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁  <br><br>
 **Languages** ➤ Python, JavaScript, TypeScript, SQL, R <br><br>
-**Backend & APIs** ➤ Node.js, Express.js, FastAPI, JWT <br><br>
+**Backend & APIs** ➤ Node.js, FastAPI, JWT <br><br>
 **Frontend** ➤ React, Next.js, TailwindCSS, Vite <br><br>
 **Databases** ➤ PostgreSQL, MongoDB, SQLite <br><br>
 **Deployment & Infra** ➤ Vercel, Cloudflare, Docker <br><br>
 **Data / AI** ➤ NumPy, Pandas, PyTorch <br><br>
-**Creative** ➤ Adobe Premiere Pro, Affinity Designer, Aseprite <br><br>
+**Creative** ➤ Adobe Premiere Pro, Affinity Designer, Canva, Aseprite <br><br>
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
