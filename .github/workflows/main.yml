@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -39,4 +41,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
           git commit -m "Update coding stats"
-          git push
+          git push origin HEAD:${{ github.ref_name }}
