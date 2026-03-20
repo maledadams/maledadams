@@ -27,7 +27,7 @@ jobs:
       - name: Update README with coding stats
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          WAKATIME_API_URL: https://hackatime.hackclub.com/api/hackatime/v1/
+          HACKATIME_USERNAME: ${{ vars.HACKATIME_USERNAME || github.repository_owner }}
         run: python .github/scripts/update_waka_readme.py
 
       - name: Commit README changes

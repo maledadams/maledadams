@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Iterable
 from urllib.error import HTTPError, URLError
@@ -14,24 +14,14 @@ from urllib.request import Request, urlopen
 README_PATH = Path("README.md")
 START_MARKER = "<!--START_SECTION:waka-->"
 END_MARKER = "<!--END_SECTION:waka-->"
-DEFAULT_API_URLS = (
-    "https://hackatime.hackclub.com/api/hackatime/v1/",
-)
+HACKATIME_API_ROOT = "https://hackatime.hackclub.com/api/v1"
+ROLLING_DAYS = 30
 
 
-def candidate_api_urls() -> list[str]:
-    urls: list[str] = []
-    configured = os.getenv("WAKATIME_API_URL", "").strip()
-    if configured:
-        urls.append(configured)
-    urls.extend(DEFAULT_API_URLS)
-
-    deduped: list[str] = []
-    for url in urls:
-        normalized = url.rstrip("/") + "/"
-        if normalized not in deduped:
-            deduped.append(normalized)
-    return deduped
+def rolling_window() -> tuple[str, str]:
+    end_date = datetime.now(timezone.utc).date()
+    start_date = end_date - timedelta(days=ROLLING_DAYS - 1)
+    return start_date.isoformat(), end_date.isoformat()
 
 
 def load_payload() -> tuple[dict, str]:
@@ -43,25 +33,34 @@ def load_payload() -> tuple[dict, str]:
     if not api_key:
         raise RuntimeError("Missing WAKATIME_API_KEY secret.")
 
-    errors: list[str] = []
-    for base_url in candidate_api_urls():
-        url = f"{base_url}users/current/stats/last_7_days?{urlencode({'api_key': api_key})}"
-        request = Request(url, headers={"User-Agent": "maledadams-readme-updater"})
-        try:
-            with urlopen(request, timeout=30) as response:
-                body = response.read().decode("utf-8")
-                return json.loads(body), base_url
-        except HTTPError as exc:
-            try:
-                body = exc.read().decode("utf-8")
-            except Exception:
-                body = ""
-            errors.append(f"{base_url} -> HTTP {exc.code}: {body[:200]}")
-        except URLError as exc:
-            errors.append(f"{base_url} -> {exc.reason}")
+    username = os.getenv("HACKATIME_USERNAME", "").strip()
+    if not username:
+        raise RuntimeError("Missing HACKATIME_USERNAME.")
 
-    joined = "\n".join(errors) if errors else "No endpoints attempted."
-    raise RuntimeError(f"Unable to fetch coding stats.\n{joined}")
+    start_date, end_date = rolling_window()
+    query = urlencode(
+        {
+            "api_key": api_key,
+            "start_date": start_date,
+            "end_date": end_date,
+            "features": "languages,projects,editors",
+        }
+    )
+    url = f"{HACKATIME_API_ROOT}/users/{username}/stats?{query}"
+    request = Request(url, headers={"User-Agent": "maledadams-readme-updater"})
+
+    try:
+        with urlopen(request, timeout=30) as response:
+            body = response.read().decode("utf-8")
+            return json.loads(body), url
+    except HTTPError as exc:
+        try:
+            body = exc.read().decode("utf-8")
+        except Exception:
+            body = ""
+        raise RuntimeError(f"Unable to fetch coding stats.\n{url} -> HTTP {exc.code}: {body[:300]}") from exc
+    except URLError as exc:
+        raise RuntimeError(f"Unable to fetch coding stats.\n{url} -> {exc.reason}") from exc
 
 
 def format_lines(items: Iterable[dict], empty_label: str) -> list[str]:
@@ -98,7 +97,8 @@ def render_section(payload: dict, source_url: str) -> str:
     if "languages" not in data:
         raise RuntimeError(f"Unexpected stats response from {source_url}: {json.dumps(payload)[:500]}")
 
-    range_text = data.get("range") or "Last 7 Days"
+    start_date, end_date = rolling_window()
+    range_text = f"Last {ROLLING_DAYS} Days ({start_date} to {end_date})"
     total_time = data.get("human_readable_total") or data.get("text") or "0 secs"
     updated_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
@@ -107,7 +107,7 @@ def render_section(payload: dict, source_url: str) -> str:
         f"**{range_text}**",
         "",
         f"- Total coding time: {total_time}",
-        f"- Source: {source_url}",
+        f"- Source: Hackatime API",
         f"- Updated: {updated_at}",
         "",
         "**Languages**",
@@ -120,13 +120,14 @@ def render_section(payload: dict, source_url: str) -> str:
         ]
     )
     lines.extend(format_lines(data.get("projects", []), "No project data yet"))
-    lines.extend(
-        [
-            "",
-            "**Editors**",
-        ]
-    )
-    lines.extend(format_lines(data.get("editors", []), "No editor data yet"))
+    if data.get("editors"):
+        lines.extend(
+            [
+                "",
+                "**Editors**",
+            ]
+        )
+        lines.extend(format_lines(data.get("editors", []), "No editor data yet"))
     lines.append("")
     return "\n".join(lines)
 

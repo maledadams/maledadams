@@ -19,27 +19,24 @@ When I’m not coding, I’m usually messing with design, editing videos, or exp
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 <!--START_SECTION:waka-->
 
-**last_7_days**
+**Last 30 Days (2026-02-19 to 2026-03-20)**
 
-- Total coding time: 2 hrs 5 mins
-- Source: https://hackatime.hackclub.com/api/hackatime/v1/
-- Updated: 2026-03-20 02:39 UTC
+- Total coding time: 10h 36m 12s
+- Source: Hackatime API
+- Updated: 2026-03-20 02:42 UTC
 
 **Languages**
-- Markdown: 0 hrs 48 mins (31.32%)
-- TypeScript: 0 hrs 31 mins (20.19%)
-- Shell: 0 hrs 19 mins (12.7%)
-- Python: 0 hrs 15 mins (10.18%)
-- YAML: 0 hrs 10 mins (6.95%)
+- TypeScript: 6h 45m (63.76%)
+- Markdown: 2h 4m (19.63%)
+- Other: 1h 15m (11.91%)
+- Shell: 35m (5.5%)
+- Python: 23m (3.73%)
 
 **Projects**
-- seo-title-hook-rewriter: 0 hrs 49 mins (43.23%)
-- youth-movement-studio: 0 hrs 38 mins (33.56%)
-- maledadams: 0 hrs 13 mins (11.66%)
-- sentiment-analysis-fast-api: 0 hrs 8 mins (7.57%)
-- the-creative-desk: 0 hrs 4 mins (3.98%)
-
-**Editors**
-- VS Code: 2 hrs 5 mins (100.0%)
+- youth-movement-studio: 6h 31m (61.49%)
+- NovaHabitat: 53m (8.46%)
+- seo-title-hook-rewriter: 49m (7.85%)
+- telecom-fieldops-capstone: 33m (5.3%)
+- table-master: 30m (4.77%)
 <!--END_SECTION:waka-->
 
