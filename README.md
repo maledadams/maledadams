@@ -17,4 +17,6 @@ When I’m not coding, I’m usually messing with design, editing videos, or exp
 **Data / AI** ➤ NumPy, Pandas, PyTorch, LLMs (prompt engineering, workflows)<br><br>
 **Creative** ➤ Adobe Premiere Pro, Affinity Designer, Canva, Aseprite <br><br>
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
 
