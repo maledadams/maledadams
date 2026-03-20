@@ -1,4 +1,4 @@
-name: Waka Readme
+name: Hackatime Readme
 
 on:
   schedule:
@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   update-readme:
-    name: Update Readme with Metrics
+    name: Update Readme with Hackatime Metrics
     runs-on: ubuntu-latest
 
     steps:

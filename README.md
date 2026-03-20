@@ -17,13 +17,13 @@ When I’m not coding, I’m usually messing with design, editing videos, or exp
 **Data / AI** ➤ NumPy, Pandas, PyTorch, LLMs (prompt engineering, workflows)<br><br>
 **Creative** ➤ Adobe Premiere Pro, Affinity Designer, Canva, Aseprite <br><br>
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-<!--START_SECTION:waka-->
+<!--START_SECTION:hackatime-->
 
 **Last 30 Days (2026-02-19 to 2026-03-20)**
 
 - Total coding time: 10h 36m 12s
 - Source: Hackatime API
-- Updated: 2026-03-20 02:43 UTC
+- Updated: 2026-03-20 02:46 UTC
 
 **Languages**
 - TypeScript: 6h 45m (63.76%)
@@ -38,5 +38,5 @@ When I’m not coding, I’m usually messing with design, editing videos, or exp
 - seo-title-hook-rewriter: 49m (7.85%)
 - telecom-fieldops-capstone: 33m (5.3%)
 - table-master: 30m (4.77%)
-<!--END_SECTION:waka-->
+<!--END_SECTION:hackatime-->
 

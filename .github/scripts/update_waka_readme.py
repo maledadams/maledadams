@@ -12,8 +12,14 @@ from urllib.request import Request, urlopen
 
 
 README_PATH = Path("README.md")
-START_MARKER = "<!--START_SECTION:waka-->"
-END_MARKER = "<!--END_SECTION:waka-->"
+START_MARKERS = (
+    "<!--START_SECTION:hackatime-->",
+    "<!--START_SECTION:waka-->",
+)
+END_MARKERS = (
+    "<!--END_SECTION:hackatime-->",
+    "<!--END_SECTION:waka-->",
+)
 HACKATIME_API_ROOT = "https://hackatime.hackclub.com/api/v1"
 ROLLING_DAYS = 30
 
@@ -134,11 +140,19 @@ def render_section(payload: dict, source_url: str) -> str:
 
 def update_readme(section: str) -> None:
     readme = README_PATH.read_text(encoding="utf-8")
-    if START_MARKER not in readme or END_MARKER not in readme:
-        raise RuntimeError("README.md is missing waka section markers.")
+    marker_pair = None
+    for start_marker, end_marker in zip(START_MARKERS, END_MARKERS):
+        if start_marker in readme and end_marker in readme:
+            marker_pair = (start_marker, end_marker)
+            break
 
-    start = readme.index(START_MARKER) + len(START_MARKER)
-    end = readme.index(END_MARKER)
+    if marker_pair is None:
+        raise RuntimeError("README.md is missing Hackatime section markers.")
+
+    start_marker, end_marker = marker_pair
+
+    start = readme.index(start_marker) + len(start_marker)
+    end = readme.index(end_marker)
     updated = readme[:start] + "\n" + section + readme[end:]
     README_PATH.write_text(updated, encoding="utf-8")
 
