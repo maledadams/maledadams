@@ -22,6 +22,8 @@ END_MARKERS = (
 )
 HACKATIME_API_ROOT = "https://hackatime.hackclub.com/api/v1"
 ROLLING_DAYS = 30
+TOP_ITEMS = 3
+BAR_WIDTH = 14
 
 
 def rolling_window() -> tuple[str, str]:
@@ -77,6 +79,21 @@ def format_lines(items: Iterable[dict], empty_label: str) -> list[str]:
         except ValueError:
             return 0.0
 
+    def format_percent(value: object) -> str:
+        text = str(value).strip()
+        if text.endswith("%"):
+            return text
+        return f"{text}%"
+
+    def progress_bar(value: object) -> str:
+        raw = str(value).strip().rstrip("%")
+        try:
+            percent = max(0.0, min(100.0, float(raw)))
+        except ValueError:
+            percent = 0.0
+        filled = round((percent / 100.0) * BAR_WIDTH)
+        return "[" + "#" * filled + "-" * (BAR_WIDTH - filled) + "]"
+
     rows = sorted(
         (item for item in items if item.get("name")),
         key=percent_value,
@@ -85,13 +102,10 @@ def format_lines(items: Iterable[dict], empty_label: str) -> list[str]:
     if not rows:
         return [f"- {empty_label}"]
 
-    def format_percent(value: object) -> str:
-        text = str(value).strip()
-        if text.endswith("%"):
-            return text
-        return f"{text}%"
-
-    return [f"- {item['name']}: {item.get('text', '0 secs')} ({format_percent(item.get('percent', '0'))})" for item in rows[:5]]
+    return [
+        f"- {item['name']}: {item.get('text', '0 secs')} {progress_bar(item.get('percent', '0'))} {format_percent(item.get('percent', '0'))}"
+        for item in rows[:TOP_ITEMS]
+    ]
 
 
 def render_section(payload: dict, source_url: str) -> str:
@@ -104,17 +118,14 @@ def render_section(payload: dict, source_url: str) -> str:
         raise RuntimeError(f"Unexpected stats response from {source_url}: {json.dumps(payload)[:500]}")
 
     start_date, end_date = rolling_window()
-    range_text = f"Last {ROLLING_DAYS} Days ({start_date} to {end_date})"
+    range_text = f"Coding Activity In The Last {ROLLING_DAYS} Days ({start_date} to {end_date})"
     total_time = data.get("human_readable_total") or data.get("text") or "0 secs"
-    updated_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     lines = [
         "",
         f"**{range_text}**",
         "",
         f"- Total coding time: {total_time}",
-        f"- Source: Hackatime API",
-        f"- Updated: {updated_at}",
         "",
         "**Languages**",
     ]
@@ -150,7 +161,6 @@ def update_readme(section: str) -> None:
         raise RuntimeError("README.md is missing Hackatime section markers.")
 
     start_marker, end_marker = marker_pair
-
     start = readme.index(start_marker) + len(start_marker)
     end = readme.index(end_marker)
     updated = readme[:start] + "\n" + section + readme[end:]

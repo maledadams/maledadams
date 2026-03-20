@@ -19,24 +19,18 @@ When I’m not coding, I’m usually messing with design, editing videos, or exp
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 <!--START_SECTION:hackatime-->
 
-**Last 30 Days (2026-02-19 to 2026-03-20)**
+**Coding Activity In The Last 30 Days (2026-02-19 to 2026-03-20)**
 
 - Total coding time: 10h 36m 12s
-- Source: Hackatime API
-- Updated: 2026-03-20 02:46 UTC
 
 **Languages**
-- TypeScript: 6h 45m (63.76%)
-- Markdown: 2h 4m (19.63%)
-- Other: 1h 15m (11.91%)
-- Shell: 35m (5.5%)
-- Python: 23m (3.73%)
+- TypeScript: 6h 45m [#########-----] 63.76%
+- Markdown: 2h 4m [###-----------] 19.63%
+- Other: 1h 15m [##------------] 11.91%
 
 **Projects**
-- youth-movement-studio: 6h 31m (61.49%)
-- NovaHabitat: 53m (8.46%)
-- seo-title-hook-rewriter: 49m (7.85%)
-- telecom-fieldops-capstone: 33m (5.3%)
-- table-master: 30m (4.77%)
+- youth-movement-studio: 6h 31m [#########-----] 61.49%
+- NovaHabitat: 53m [#-------------] 8.46%
+- seo-title-hook-rewriter: 49m [#-------------] 7.85%
 <!--END_SECTION:hackatime-->
 
