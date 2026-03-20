@@ -7,7 +7,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Iterable
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
 
 
@@ -23,7 +23,18 @@ END_MARKERS = (
 HACKATIME_API_ROOT = "https://hackatime.hackclub.com/api/v1"
 ROLLING_DAYS = 30
 TOP_ITEMS = 3
-BAR_WIDTH = 14
+BAR_WIDTH = 10
+
+
+def redact_url(url: str) -> str:
+    parts = urlsplit(url)
+    query = urlencode(
+        [
+            (key, "***" if key == "api_key" else value)
+            for key, value in parse_qsl(parts.query, keep_blank_values=True)
+        ]
+    )
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, query, parts.fragment))
 
 
 def rolling_window() -> tuple[str, str]:
@@ -51,24 +62,25 @@ def load_payload() -> tuple[dict, str]:
             "api_key": api_key,
             "start_date": start_date,
             "end_date": end_date,
-            "features": "languages,projects,editors",
+            "features": "languages,editors",
         }
     )
     url = f"{HACKATIME_API_ROOT}/users/{username}/stats?{query}"
+    safe_url = redact_url(url)
     request = Request(url, headers={"User-Agent": "maledadams-readme-updater"})
 
     try:
         with urlopen(request, timeout=30) as response:
             body = response.read().decode("utf-8")
-            return json.loads(body), url
+            return json.loads(body), safe_url
     except HTTPError as exc:
         try:
             body = exc.read().decode("utf-8")
         except Exception:
             body = ""
-        raise RuntimeError(f"Unable to fetch coding stats.\n{url} -> HTTP {exc.code}: {body[:300]}") from exc
+        raise RuntimeError(f"Unable to fetch coding stats.\n{safe_url} -> HTTP {exc.code}: {body[:300]}") from exc
     except URLError as exc:
-        raise RuntimeError(f"Unable to fetch coding stats.\n{url} -> {exc.reason}") from exc
+        raise RuntimeError(f"Unable to fetch coding stats.\n{safe_url} -> {exc.reason}") from exc
 
 
 def format_lines(items: Iterable[dict], empty_label: str) -> list[str]:
@@ -92,7 +104,7 @@ def format_lines(items: Iterable[dict], empty_label: str) -> list[str]:
         except ValueError:
             percent = 0.0
         filled = round((percent / 100.0) * BAR_WIDTH)
-        return "▄" * filled + " " * (BAR_WIDTH - filled)
+        return "[" + "█" * filled + "░" * (BAR_WIDTH - filled) + "]⏳"
 
     rows = sorted(
         (item for item in items if item.get("name")),
@@ -103,7 +115,7 @@ def format_lines(items: Iterable[dict], empty_label: str) -> list[str]:
         return [f"- {empty_label}"]
 
     return [
-        f"- {item['name']}: {item.get('text', '0 secs')} {progress_bar(item.get('percent', '0'))} {format_percent(item.get('percent', '0'))}"
+        f"- {item['name']}: {item.get('text', '0 secs')} ({format_percent(item.get('percent', '0'))}) {progress_bar(item.get('percent', '0'))}"
         for item in rows[:TOP_ITEMS]
     ]
 
