@@ -12,9 +12,31 @@ jobs:
   update-readme:
     name: Update Readme with Metrics
     runs-on: ubuntu-latest
+
     steps:
-      - uses: anmol098/waka-readme-stats@master
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
+          python-version: '3.x'
+
+      - name: Update README with coding stats
+        env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          WAKATIME_API_URL: ${{ vars.WAKATIME_API_URL || 'https://wakatime.com/api/v1/' }}
-          GH_TOKEN: ${{ github.token }}
+          WAKATIME_API_URL: ${{ vars.WAKATIME_API_URL }}
+        run: python .github/scripts/update_waka_readme.py
+
+      - name: Commit README changes
+        run: |
+          if git diff --quiet README.md; then
+            echo "README is already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update coding stats"
+          git push
