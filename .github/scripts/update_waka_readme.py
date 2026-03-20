@@ -92,7 +92,7 @@ def format_lines(items: Iterable[dict], empty_label: str) -> list[str]:
         except ValueError:
             percent = 0.0
         filled = round((percent / 100.0) * BAR_WIDTH)
-        return "[" + "#" * filled + "-" * (BAR_WIDTH - filled) + "]"
+        return "▄" * filled + " " * (BAR_WIDTH - filled)
 
     rows = sorted(
         (item for item in items if item.get("name")),
@@ -130,13 +130,6 @@ def render_section(payload: dict, source_url: str) -> str:
         "**Languages**",
     ]
     lines.extend(format_lines(data.get("languages", []), "No language data yet"))
-    lines.extend(
-        [
-            "",
-            "**Projects**",
-        ]
-    )
-    lines.extend(format_lines(data.get("projects", []), "No project data yet"))
     if data.get("editors"):
         lines.extend(
             [
