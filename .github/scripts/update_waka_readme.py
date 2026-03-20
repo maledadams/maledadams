@@ -15,7 +15,6 @@ README_PATH = Path("README.md")
 START_MARKER = "<!--START_SECTION:waka-->"
 END_MARKER = "<!--END_SECTION:waka-->"
 DEFAULT_API_URLS = (
-    "https://wakatime.com/api/v1/",
     "https://hackatime.hackclub.com/api/hackatime/v1/",
 )
 
