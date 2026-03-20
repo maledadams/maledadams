@@ -14,7 +14,7 @@ When I’m not coding, I’m usually messing with design, editing videos, or exp
 **Frontend** ➤ React, Next.js, TailwindCSS, Vite <br><br>
 **Databases** ➤ PostgreSQL, MongoDB, SQLite <br><br>
 **Deployment & Infra** ➤ Vercel, Cloudflare, Docker <br><br>
-**Data / AI** ➤ NumPy, Pandas, PyTorch <br><br>
+**Data / AI** ➤ NumPy, Pandas, PyTorch, LLMs (prompt engineering, workflows)<br><br>
 **Creative** ➤ Adobe Premiere Pro, Affinity Designer, Canva, Aseprite <br><br>
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
