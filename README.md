@@ -18,5 +18,28 @@ When I’m not coding, I’m usually messing with design, editing videos, or exp
 **Creative** ➤ Adobe Premiere Pro, Affinity Designer, Canva, Aseprite <br><br>
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 <!--START_SECTION:waka-->
+
+**last_7_days**
+
+- Total coding time: 2 hrs 5 mins
+- Source: https://hackatime.hackclub.com/api/hackatime/v1/
+- Updated: 2026-03-20 02:39 UTC
+
+**Languages**
+- Markdown: 0 hrs 48 mins (31.32%)
+- TypeScript: 0 hrs 31 mins (20.19%)
+- Shell: 0 hrs 19 mins (12.7%)
+- Python: 0 hrs 15 mins (10.18%)
+- YAML: 0 hrs 10 mins (6.95%)
+
+**Projects**
+- seo-title-hook-rewriter: 0 hrs 49 mins (43.23%)
+- youth-movement-studio: 0 hrs 38 mins (33.56%)
+- maledadams: 0 hrs 13 mins (11.66%)
+- sentiment-analysis-fast-api: 0 hrs 8 mins (7.57%)
+- the-creative-desk: 0 hrs 4 mins (3.98%)
+
+**Editors**
+- VS Code: 2 hrs 5 mins (100.0%)
 <!--END_SECTION:waka-->
 
