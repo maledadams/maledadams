@@ -4,7 +4,7 @@
 [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=X&logoColor=white)](https://x.com/maledadams)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:maledadams@gmail.com)
 <br><br>▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-### Hi, I’m Lucia Adams `ㅅ´ 
+### Hi, I’m Lucia
 I’m a computer science student working mostly with web development, backend systems, of AI/ML. I’ve built and maintained websites, worked with APIs, and experimented with automation and computer vision. Right now I’m focused on systems, automation, and AI implementations.
 
 When I’m not coding, I’m usually messing with design, editing videos, or exploring random projects. I listen to a lot of EDM and dive into history rabbit holes for fun. <br><br>
