@@ -19,13 +19,13 @@ When I’m not coding, I’m usually messing with design, editing videos, or exp
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 <!--START_SECTION:hackatime-->
 
-**Coding Activity In The Last 30 Days (2026-05-03 to 2026-06-01)**
+**Coding Activity In The Last 30 Days (2026-05-05 to 2026-06-03)**
 
-- Total coding time: 6h 45m 55s
+- Total coding time: 6h 17m 24s
 
 **Languages**
-- TypeScript: 4h 22m (64.69%) [██████░░░░]⏳
-- Other: 1h 56m (28.65%) [███░░░░░░░]⏳
-- Batchfile: 38m (9.39%) [█░░░░░░░░░]⏳
+- TypeScript: 4h 31m (71.84%) [███████░░░]⏳
+- Other: 1h 56m (30.97%) [███░░░░░░░]⏳
+- Markdown: 24m (6.47%) [█░░░░░░░░░]⏳
 <!--END_SECTION:hackatime-->
 
