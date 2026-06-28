@@ -7,7 +7,7 @@
 ### Hi, I’m Lucia
 I’m a computer science student working mostly with web development, backend systems, of AI/ML. I’ve built and maintained websites, worked with APIs, and experimented with automation and computer vision. Right now I’m focused on systems, automation, and AI implementations.
 
-When I’m not coding, I’m usually messing with design, editing videos, or exploring random projects. I listen to a lot of EDM and dive into history rabbit holes for fun. <br><br>
+When I’m not coding, I’m usually messing with design, editing videos, or exploring random projects. I listen to a lot of EDM and dive into rabbit holes for fun. <br><br>
 ⠈⠂⠄⠄⠂⠁⠁⠂⠄⠄⠂⠁⠁⠂⠄⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂  <br><br>
 **Languages** ➤ Python, JavaScript, TypeScript, SQL, R <br><br>
 **Backend & APIs** ➤ Node.js, FastAPI, JWT <br><br>
