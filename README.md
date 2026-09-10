@@ -4,8 +4,8 @@
 I’m a computer engineering student working mostly with web development, systems, and AI
 
 When I’m not coding, I’m usually messing with design, editing videos, or exploring random projects. I listen to a lot of EDM and dive into rabbit holes for fun. <br><br>
+
 ⠈⠂⠄⠄⠂⠁⠁⠂⠄⠄⠂⠁⠁⠂⠄⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂⠄⠂⠁⠁⠂  <br><br>
-▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 <!--START_SECTION:hackatime-->
 **Coding Activity In The Last 30 Days (2026-08-12 to 2026-09-10)**
 
@@ -16,4 +16,4 @@ When I’m not coding, I’m usually messing with design, editing videos, or exp
 - Other: 1h 36m (29.42%) [███░░░░░░░]⏳
 - JavaScript: 41m (12.56%) [█░░░░░░░░░]⏳
 <!--END_SECTION:hackatime-->
-
+<br><br>▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
