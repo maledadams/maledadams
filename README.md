@@ -6,7 +6,7 @@ I’m a computer engineering student working mostly with web development, system
 When I’m not coding, I’m usually messing with design, editing videos, or exploring random projects. I listen to a lot of EDM and dive into rabbit holes for fun. <br><br>
 <!--START_SECTION:hackatime-->
 
-**Coding Activity In The Last 30 Days (2026-09-27 to 2026-10-26)**
+**Coding Activity In The Last 30 Days (2026-09-28 to 2026-10-27)**
 
 - Total coding time: 4h 28m 54s
 
