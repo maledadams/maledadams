@@ -6,13 +6,13 @@ I’m a computer engineering student working mostly with web development, system
 When I’m not coding, I’m usually messing with design, editing videos, or exploring random projects. I listen to a lot of EDM and dive into rabbit holes for fun. <br><br>
 <!--START_SECTION:hackatime-->
 
-**Coding Activity In The Last 30 Days (2026-10-07 to 2026-11-05)**
+**Coding Activity In The Last 30 Days (2026-10-08 to 2026-11-06)**
 
-- Total coding time: 3h 56m 24s
+- Total coding time: 16h 8m 59s
 
 **Languages**
-- TypeScript: 2h 36m (66.08%) [███████░░░]⏳
-- Other: 1h 22m (34.93%) [███░░░░░░░]⏳
-- JSON: 21m (9.28%) [█░░░░░░░░░]⏳
+- Rust: 7h 11m (44.55%) [████░░░░░░]⏳
+- Markdown: 7h 3m (43.73%) [████░░░░░░]⏳
+- JavaScript: 3h 59m (24.75%) [██░░░░░░░░]⏳
 <!--END_SECTION:hackatime-->
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
